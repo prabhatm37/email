@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-ibm-plex-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), monospace;
+
+  /* Native color overrides to generate a warm-light theme */
+  --color-slate-950: #f5f4f0; /* Page Background */
+  --color-slate-900: #ffffff; /* Card/Sidebar/Modal backgrounds */
+  --color-slate-850: #faf9f6; /* Subtle row hovers / inner cards */
+  --color-slate-800: #e2e2dc; /* Primary border/divider color */
+  --color-slate-700: #d1d1ca; /* Secondary border/input border color */
+  --color-slate-600: #9f9f95; /* Placeholder / disabled states */
+  --color-slate-500: #787870; /* Muted labels */
+  --color-slate-400: #5a5a54; /* Secondary body text */
+  --color-slate-300: #383834; /* Regular body text */
+  --color-slate-200: #1f1f1e; /* Normal dark text */
+  --color-slate-100: #111111; /* Dark headings & logo accents */
+
+  /* Readability overrides for status indicators and active states in light mode */
+  --color-indigo-500: #4f46e5;
+  --color-indigo-400: #4338ca; /* Deep indigo text for readability */
+  --color-indigo-300: #3730a3;
+
+  --color-emerald-500: #10b981;
+  --color-emerald-400: #047857; /* Deep green text for active badges */
+  --color-emerald-300: #065f46;
+
+  --color-rose-500: #ef4444;
+  --color-rose-400: #be123c; /* Deep red text for error/failed badges */
+  --color-rose-300: #9f1239;
+
+  --color-blue-500: #3b82f6;
+  --color-blue-400: #1d4ed8;
+
+  --color-amber-500: #f59e0b;
+  --color-amber-400: #b45309;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Custom premium scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate-800);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-slate-700);
+}
+
+/* Smooth micro-interactions for interactive elements */
+a, button, input, select, textarea, [contenteditable="true"] {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
